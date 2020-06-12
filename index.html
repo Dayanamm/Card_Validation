@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+  <head>
+   <meta charset = "uft-8">
+   <title>Validación de tarjeta</title>
+   <link rel="stylesheet" href = "style.css">
+  </head>
+
+  <body>
+   <script src = "validator.js"></script>
+   <script src = "index.js"></script>
+
+    <!--Menú superior-->
+    <header>
+      <img class = "icono" src = "Imagenes/Icono.jpg" alt = "Icono">
+        <ul class = "menu">
+        <li>Nosotros</li>
+        <li>Cartelera</li>
+        <li>Confiteria</li>
+        <li>Contacto </li>
+        </ul>
+    </header>
+
+    <main class = "caja">
+      <p> Para finalizar la compra debes validar tu tarjeta. </p>
+
+      <!--Formulario-->
+      <form action = "" method = "">
+
+        <div>
+          <img class = "imagen" src = "Imagenes/Tarjeta Sara.png" alt = "Modelo de tarjeta"><br><br>
+        </div>
+
+        <!--Número de identificación de tarjeta-->
+        <div>
+          <label for = "identificacion">Digita el numero de identificacion de tu tarjeta</label><br><br>
+      
+          <input type = "text" id = "identificacion"   oninput = "mostrar()" name  = "identificacion" maxlength = "16" minlength="13" required pattern = "(/[^0-9-\s\g]+/)"  placeholder = "Eje:5137 5985 5654 2338"  autocomplete = "off" ><br>
+          <p class = "error" id = "error"></p>
+          <p class = "espacio" id = "espacio"></p>
+        </div>
+
+        <!--Nombre usuario-->
+        <div>
+          <label for = "fname">Nombre</label><br>
+
+          <input type = "text" id = "name" name = "name" placeholder = "Eje:Sara López" required autocomplete = "off" >
+        </div>
+
+        <!--Boton envio de datos-->
+        <div>
+          <input type = "submit" onclick = " maskify() , isValidCard()"  name = "continuar" id = "enviar" value = "Validar tarjeta de crédito">
+        </div>
+      </form>
+      <!--Fin del formulario-->
+
+      <!--Segunda pantalla: Si la tarjeta es válida-->
+      <section class = "ventana" id = "abrir">
+
+        <!--Contenído de la segunda pantalla-->
+        <div>
+          <p id = "validCard"></p>
+          <p id = "maskify"></p>
+        </div>
+
+        <!--Cerrar pantalla-->
+        <div> 
+          <img class = "cerrar"src="Imagenes/cerrar.png" alt = "Cerrar" onclick ="cerrar()">
+        </div>
+
+        <!--Imagen candado verde-->
+        <div> <img class = "candado" src = "Imagenes/candado.png" alt = "Valido" >
+        </div>
+      </section>
+      <!--Fin de segunda pantalla válida-->
+
+      <!--Segunda pantalla: Si la tarjeta es inválida-->
+      <section class = "ventana" id = "abrirx">
+
+         <!--Contenído de la segunda pantalla-->
+        <div>
+          <p id="inValidCard"></p>
+        </div>
+
+         <!--Cerrar pantalla-->
+        <div>
+          <img class = "cerrar" src = "Imagenes/cerrar.png" alt = "Cerrar" onclick = "cerrarx()">
+        </div>
+
+        <!--Imagen candado rojo-->
+        <div> 
+          <img class = "candado"src = "Imagenes/candado x.png" alt = "Invalido">
+        </div>
+      </section>
+      <!--Fin de segunda pantalla inválida-->
+    </main>
+
+    <footer>
+     <p class = "derechos">Todos los derechos reservados ©</p>
+    </footer>
+  </body>
+</html>

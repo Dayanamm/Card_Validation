@@ -1,0 +1,117 @@
+.imagen{
+width: 400px;
+height: 250px;
+border-radius: 12px;
+}
+
+header {
+background: #0d2f5a;
+width: 1380px;
+height: 80px;
+margin: -17px;
+padding: 0;
+}
+
+.icono{
+width: 150px;
+height: 81px;
+float: left;
+}
+
+.menu{
+padding: 0;
+ }
+
+.menu li{
+display: inline;
+padding: 10px 50px;
+float: left;
+margin-top: 24px;
+margin-left: 100px;
+border-color: black; 
+background-color:#0d2f5a;
+color: rgb(250, 250, 250);
+text-decoration-line: underline; 
+}
+
+.menu li:hover{
+background-color: rgb(48, 148, 206);
+margin-bottom: 1px;
+padding-bottom: 15px;
+}
+
+body{
+background: url(Imagenes/fondo.jpg);
+background-size: cover;
+background-attachment: scroll;
+text-align: center;
+padding: 0;
+margin: 0;
+}
+
+.caja{
+background-color: rgb(255, 255, 254);
+border-style: groove;
+border-width: 1px 1px;
+border-color: rgb(136, 95, 6);
+border-radius: 20px;
+padding: 30px;
+margin: 30px 370px;
+}
+
+#enviar{
+background-color: #0d2f5a;
+width: 30%;
+border-color: white; 
+width: 400px; 
+height: 40px;
+margin: 20px;
+border-radius: 10px;
+color: white;
+}
+
+#name{
+border-radius: 10px;
+height: 25px;
+}
+
+#identificacion{
+border-radius: 10px;
+height: 25px;
+}
+
+.ventana{
+background-color: #0d2e5a;
+width: 30%;
+color: white;
+padding: 33px;
+min-height: 350px;
+width: 450px;
+border-radius: 22px;
+position: absolute;
+left: 30.8%;
+top: 27%;
+display: none;
+}
+
+.cerrar{
+position: absolute;
+right: 8px;
+top: 8px;
+height: 24px;
+width: 24px;
+}
+
+.derechos{
+color: white;
+}
+
+.candado{
+width: 200px;
+height: 200px;
+top: 300px;
+}
+
+.error{
+color: red;
+}
